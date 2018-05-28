@@ -1,0 +1,76 @@
+body {
+    font-family: "Georgia", sans-serif;
+}
+header {
+  background: #060606;
+  height: 70px;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+}
+h1 {
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+input {
+  height: 50px;
+}
+.btn-default {
+  color:white;
+  background-color: #060000;
+}
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  width: 330px;
+  height: 90%;
+  z-index: 10;
+  background: rgba(1,1,1,0.9);
+  top: 60px;
+  left: 0px;
+}
+.filter-search {
+  max-width: 80%;
+  vertical-align: center;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.HideUp {
+  transform: translateY(-2000px);
+}
+.nav-button:hover {
+  cursor: pointer;
+}
+.collapseSpeed{
+  transition: transform 1.5s ease;
+}
+#map {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+.sushibarList {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+}
+.btn{
+  border-radius: 0px;
+}
+p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.list-group-item{
+  color:white;
+  background-color: rgba(0,0,0,0.6);
+}
