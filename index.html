@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Map Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+<header>
+  <!--collapse button and heading-->
+    <h1><i class="nav-button fas fa-minus-circle" data-bind="click: collapseClick, css: {'fa-plus-circle': isHidden}"></i>tsukiji sushi bars</h1>
+  </header>
+  <div class="container-fluid">
+    <div class="sidebar collapseSpeed" data-bind="css: {'HideUp': isHidden}">
+      <!--search bar and clear button-->
+        <form >
+          <div class="input-group">
+              <input type="text" name="search" class="filter-search" placeholder="Search..." data-bind="textInput: searchWord, valueUpdate: 'afterkeydown'">
+              <div class="input-group-btn">
+                  <button class="btn btn-default">clear search</button>
+              </div>
+          </div>
+        </form>
+        <!--List of Locations-->
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="sushibarList">
+            <div data-bind="foreach: sushibarList">
+                <p class="list-group-item" data-bind="text: title, click: displayInfo"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--map of locality-->
+    <div id="map"></div>
+  </div>
+  <!--bootstrap related-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--google api related-->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyBktpRvPZ00qk74xab8Yp_5ttCEHX0c1zs&callback=initMap" onerror="mapsError()">
+    </script>
+    <!--knockout js related-->
+    <script src="js/lib/knockout.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
